@@ -287,31 +287,38 @@
       box-shadow: 0 0 16px rgba(0, 210, 180, 0.6);
     }
 
+    .stage-top-left-group {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
     .floating-sidebar-arrow-btn {
-      position: fixed;
-      left: 16px;
-      top: 86px;
-      z-index: 999;
       background: linear-gradient(135deg, #092047, #061530);
       border: 1.5px solid var(--teal-primary);
       color: var(--teal-primary);
-      width: 40px;
-      height: 40px;
+      width: 36px;
+      height: 36px;
       border-radius: 50%;
-      box-shadow: 0 4px 20px rgba(0, 210, 180, 0.5);
+      box-shadow: 0 4px 16px rgba(0, 210, 180, 0.4);
       cursor: pointer;
       display: none;
       align-items: center;
       justify-content: center;
       backdrop-filter: blur(10px);
       transition: all 0.25s ease;
+      flex-shrink: 0;
     }
 
     .floating-sidebar-arrow-btn:hover {
-      transform: translateX(4px) scale(1.12);
-      box-shadow: 0 6px 28px rgba(0, 210, 180, 0.8);
+      transform: scale(1.12);
+      box-shadow: 0 6px 24px rgba(0, 210, 180, 0.7);
       background: linear-gradient(135deg, #0d2d63, #081d42);
       color: #ffffff;
+    }
+
+    .dashboard-grid-container.sidebar-collapsed #floating-sidebar-open-btn {
+      display: flex !important;
     }
 
     .sidebar-arrow-svg {
@@ -1315,14 +1322,6 @@
     </div>
   </header>
 
-  <!-- FLOATING ARROW TOGGLE WHEN SIDEBAR IS COLLAPSED -->
-  <button id="floating-sidebar-open-btn" class="floating-sidebar-arrow-btn" onclick="toggleSidebar()" title="Expand Left Sidebar">
-    <svg class="sidebar-arrow-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
-      <line x1="3" y1="12" x2="21" y2="12"></line>
-      <polyline points="13 4 21 12 13 20"></polyline>
-    </svg>
-  </button>
-
   <!-- 3-COLUMN DASHBOARD -->
   <main class="dashboard-grid-container" id="dashboard-main-container">
 
@@ -1403,8 +1402,18 @@
       
       <!-- TOP STATUS BAR -->
       <div class="stage-top-status-bar">
-        <div class="recording-active-pill">
-          <span>॥।</span> Recording Active...
+        <div class="stage-top-left-group">
+          <button id="floating-sidebar-open-btn" class="floating-sidebar-arrow-btn" onclick="toggleSidebar()" title="Expand Left Sidebar">
+            <svg class="sidebar-arrow-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="3" y1="12" x2="21" y2="12"></line>
+              <polyline points="13 4 21 12 13 20"></polyline>
+            </svg>
+          </button>
+          <div id="recording-status-container">
+            <div class="recording-active-pill">
+              <span>॥।</span> Recording Active...
+            </div>
+          </div>
         </div>
       </div>
 
@@ -2394,9 +2403,9 @@
 
       updateOrbUI('stopped');
 
-      const topStatusPill = document.querySelector('.stage-top-status-bar');
-      if (topStatusPill) {
-        topStatusPill.innerHTML = `
+      const statusContainer = document.getElementById('recording-status-container') || document.querySelector('.stage-top-status-bar');
+      if (statusContainer) {
+        statusContainer.innerHTML = `
           <div class="recording-complete-pill" style="background: rgba(239, 68, 68, 0.15); color: #fca5a5; border-color: rgba(239, 68, 68, 0.4);">
             <span>🛑</span> Conversation Ended
           </div>

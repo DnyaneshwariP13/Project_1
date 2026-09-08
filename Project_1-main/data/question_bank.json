@@ -1,6 +1,6 @@
 {
   "version": "1.2.0",
-  "description": "Sehat AI Clinical Question Bank for Diabetes Pre-screening in Hindi+English (Hinglish)",
+  "description": "Diabetes Dost AI Clinical Question Bank for Diabetes Pre-screening in Hindi+English (Hinglish)",
   "common": [
     {
       "question_id": "COM_CONSENT",
@@ -9,7 +9,9 @@
       "question_hi": "नमस्ते, मेरा नाम Diabetes Dost है। मैं Doctor से मिलने से पहले आपकी Diabetes से जुड़ी कुछ Health जानकारी समझने में help करूंगा। क्या आप बातचीत और Audio Recording के लिए सहमत हैं?",
       "priority": "mandatory",
       "required": true,
-      "follow_up_topics": ["demographics"]
+      "follow_up_topics": [
+        "demographics"
+      ]
     },
     {
       "question_id": "COM_DEMOGRAPHICS",
@@ -18,7 +20,9 @@
       "question_hi": "धन्यवाद। आपकी सही पहचान और Record के लिए, कृपया अपना पूरा Name, Age और Gender (Male/Female) बताइए।",
       "priority": "mandatory",
       "required": true,
-      "follow_up_topics": ["diabetic_status"]
+      "follow_up_topics": [
+        "diabetic_status"
+      ]
     },
     {
       "question_id": "COM_STATUS",
@@ -27,7 +31,12 @@
       "question_hi": "क्या आपको पहले से Diabetes (Sugar की बीमारी) है, या आपको इसके कोई Symptoms महसूस हो रहे हैं, या आपको Diabetes नहीं है?",
       "priority": "mandatory",
       "required": true,
-      "follow_up_topics": ["diabetes_type", "diabetes_duration", "symptoms_screen", "risk_factor_screen"]
+      "follow_up_topics": [
+        "diabetes_type",
+        "diabetes_duration",
+        "symptoms_screen",
+        "risk_factor_screen"
+      ]
     }
   ],
   "known_diabetic": [
@@ -38,7 +47,9 @@
       "question_hi": "क्या आपको पता है कि आपको Type 1 Diabetes है या Type 2 Diabetes?",
       "priority": "high",
       "required": false,
-      "follow_up_topics": ["diabetes_duration"]
+      "follow_up_topics": [
+        "diabetes_duration"
+      ]
     },
     {
       "question_id": "KD_DURATION",
@@ -47,7 +58,9 @@
       "question_hi": "आपको Diabetes का पता कितने Time पहले चला था (जैसे कितने Months या Years से है)?",
       "priority": "high",
       "required": false,
-      "follow_up_topics": ["medication_type"]
+      "follow_up_topics": [
+        "medication_type"
+      ]
     },
     {
       "question_id": "KD_MEDICATIONS",
@@ -56,7 +69,9 @@
       "question_hi": "क्या आप Diabetes के लिए कोई Medicines या Insulin ले रहे हैं, और क्या आप इन्हें Time पर लेते हैं?",
       "priority": "high",
       "required": false,
-      "follow_up_topics": ["blood_sugar_monitoring"]
+      "follow_up_topics": [
+        "blood_sugar_monitoring"
+      ]
     },
     {
       "question_id": "KD_SUGAR_LEVELS",
@@ -65,7 +80,9 @@
       "question_hi": "हाल ही में आपने अपना Blood Sugar या HbA1c Test कराया है? यदि याद हो तो आपकी Sugar कितनी आई थी?",
       "priority": "high",
       "required": false,
-      "follow_up_topics": ["hyperglycemia_symptoms"]
+      "follow_up_topics": [
+        "hyperglycemia_symptoms"
+      ]
     },
     {
       "question_id": "KD_THIRST_URINATION",
@@ -74,7 +91,9 @@
       "question_hi": "क्या आपको आजकल बहुत ज्यादा प्यास लगना या रात में बार-बार Urine (पेशाब) आने की Problem हो रही है?",
       "priority": "medium",
       "required": false,
-      "follow_up_topics": ["vision_and_fatigue"]
+      "follow_up_topics": [
+        "vision_and_fatigue"
+      ]
     },
     {
       "question_id": "KD_VISION_FATIGUE",
@@ -83,7 +102,9 @@
       "question_hi": "क्या आपको आँखों से Blurry Vision (धुंधला दिखना), बहुत ज्यादा Fatigue (थकान) या बिना किसी Reason Weight Loss की शिकायत है?",
       "priority": "medium",
       "required": false,
-      "follow_up_topics": ["neuropathy_and_wounds"]
+      "follow_up_topics": [
+        "neuropathy_and_wounds"
+      ]
     },
     {
       "question_id": "KD_NUMBNESS_WOUNDS",
@@ -92,7 +113,9 @@
       "question_hi": "क्या आपके हाथ-पैरों में Numbness (सुन्नपन), झनझनाहट या कोई ऐसा Wound (घाव) है जो जल्दी Heal नहीं हो रहा?",
       "priority": "medium",
       "required": false,
-      "follow_up_topics": ["hypoglycemia_episodes"]
+      "follow_up_topics": [
+        "hypoglycemia_episodes"
+      ]
     },
     {
       "question_id": "KD_HYPO_EPISODES",
@@ -101,7 +124,9 @@
       "question_hi": "क्या कभी आपको अचानक बहुत ज्यादा Sweating (पसीना आना), हाथ कांपना, घबराहट या Low Sugar जैसा महसूस हुआ है?",
       "priority": "high",
       "required": false,
-      "follow_up_topics": ["lifestyle_and_diet"]
+      "follow_up_topics": [
+        "lifestyle_and_diet"
+      ]
     },
     {
       "question_id": "KD_LIFESTYLE_DIET",
@@ -110,7 +135,9 @@
       "question_hi": "आपकी Daily Physical Activity, Exercise और Diet Routine कैसा रहता है?",
       "priority": "low",
       "required": false,
-      "follow_up_topics": ["family_history"]
+      "follow_up_topics": [
+        "family_history"
+      ]
     },
     {
       "question_id": "KD_FAMILY_HISTORY",
@@ -119,7 +146,9 @@
       "question_hi": "क्या आपके Parents या Family (माता-पिता, भाई-बहन) में किसी और को भी Diabetes की History है?",
       "priority": "medium",
       "required": false,
-      "follow_up_topics": ["pregnancy_history"]
+      "follow_up_topics": [
+        "pregnancy_history"
+      ]
     },
     {
       "question_id": "KD_PREGNANCY_HISTORY",
@@ -129,7 +158,9 @@
       "priority": "low",
       "required": false,
       "gender_restriction": "female",
-      "follow_up_topics": ["gestational_diabetes"]
+      "follow_up_topics": [
+        "gestational_diabetes"
+      ]
     },
     {
       "question_id": "KD_GESTATIONAL",
@@ -151,7 +182,9 @@
       "question_hi": "क्या आपको अक्सर बहुत ज्यादा प्यास लगना, बार-बार Urine (पेशाब) आना या बिना किसी Reason तेजी से Weight Loss महसूस हो रहा है?",
       "priority": "high",
       "required": false,
-      "follow_up_topics": ["energy_and_vision"]
+      "follow_up_topics": [
+        "energy_and_vision"
+      ]
     },
     {
       "question_id": "UN_ENERGY_VISION",
@@ -160,7 +193,9 @@
       "question_hi": "क्या आप हमेशा ज्यादा Fatigue (थकान), Weakness या कभी-कभी Blurry Vision महसूस करते हैं?",
       "priority": "high",
       "required": false,
-      "follow_up_topics": ["healing_and_numbness"]
+      "follow_up_topics": [
+        "healing_and_numbness"
+      ]
     },
     {
       "question_id": "UN_HEALING_NUMBNESS",
@@ -169,7 +204,9 @@
       "question_hi": "क्या शरीर पर लगी चोट या Wound भरने में ज्यादा Time लगता है, या पैरों में Numbness और झनझनाहट होती है?",
       "priority": "medium",
       "required": false,
-      "follow_up_topics": ["family_history"]
+      "follow_up_topics": [
+        "family_history"
+      ]
     },
     {
       "question_id": "UN_FAMILY_HISTORY",
@@ -178,7 +215,9 @@
       "question_hi": "क्या आपके Family (माता-पिता, भाई-बहन) में किसी को Diabetes की History रही है?",
       "priority": "high",
       "required": false,
-      "follow_up_topics": ["previous_testing"]
+      "follow_up_topics": [
+        "previous_testing"
+      ]
     },
     {
       "question_id": "UN_PREV_TESTING",
@@ -187,7 +226,9 @@
       "question_hi": "क्या आपने पहले कभी अपना Blood Sugar या Fasting Sugar Test कराया है? यदि हाँ, तो क्या Result आया था?",
       "priority": "medium",
       "required": false,
-      "follow_up_topics": ["pregnancy_history"]
+      "follow_up_topics": [
+        "pregnancy_history"
+      ]
     },
     {
       "question_id": "UN_PREGNANCY_HISTORY",
@@ -197,7 +238,9 @@
       "priority": "low",
       "required": false,
       "gender_restriction": "female",
-      "follow_up_topics": ["gestational_diabetes"]
+      "follow_up_topics": [
+        "gestational_diabetes"
+      ]
     },
     {
       "question_id": "UN_GESTATIONAL",
@@ -219,7 +262,9 @@
       "question_hi": "क्या आपके Parents या Family में किसी को Diabetes की History है?",
       "priority": "high",
       "required": false,
-      "follow_up_topics": ["physical_activity"]
+      "follow_up_topics": [
+        "physical_activity"
+      ]
     },
     {
       "question_id": "ND_PHYSICAL_ACTIVITY",
@@ -228,7 +273,9 @@
       "question_hi": "आपकी Daily Physical Activity कैसी है? क्या आप regular कोई Exercise, Walk या Workout करते हैं?",
       "priority": "medium",
       "required": false,
-      "follow_up_topics": ["weight_and_lifestyle"]
+      "follow_up_topics": [
+        "weight_and_lifestyle"
+      ]
     },
     {
       "question_id": "ND_WEIGHT_LIFESTYLE",
@@ -237,7 +284,9 @@
       "question_hi": "क्या पिछले कुछ Months में आपका Weight अचानक बढ़ा है, या आपको पेट के आसपास extra fat महसूस होता है?",
       "priority": "medium",
       "required": false,
-      "follow_up_topics": ["recent_screening"]
+      "follow_up_topics": [
+        "recent_screening"
+      ]
     },
     {
       "question_id": "ND_RECENT_SCREENING",
@@ -246,7 +295,9 @@
       "question_hi": "क्या पिछले एक Year में आपने कभी Routine Blood Test या Fasting Sugar Test कराया है?",
       "priority": "low",
       "required": false,
-      "follow_up_topics": ["pregnancy_history"]
+      "follow_up_topics": [
+        "pregnancy_history"
+      ]
     },
     {
       "question_id": "ND_PREGNANCY_HISTORY",
@@ -256,7 +307,9 @@
       "priority": "low",
       "required": false,
       "gender_restriction": "female",
-      "follow_up_topics": ["gestational_diabetes"]
+      "follow_up_topics": [
+        "gestational_diabetes"
+      ]
     },
     {
       "question_id": "ND_GESTATIONAL",
